@@ -1,0 +1,62 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 1157px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.title {
+    display: flex;
+    align-items: center;
+}
+.title::before {
+    content: '';
+    /* display: inline-block; */
+    margin-right: 20px;
+    width: 200px;
+    padding: 20px;
+    height: 45px;
+    background-image: url("../images/icon-covid.png");
+}
+.list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.item {
+    display: flex;
+    padding: 10px;
+    /* width: 250px; */
+    border: 1px solid;
+}
+/* .item + .item {
+    margin-left: 10px;
+} */
+/* .item:first-child {
+    background-color: blue;
+}
+.item:nth-child(2) {
+    background-color: yellow;
+}
+.item:nth-child(3) {
+    background-color: red;
+}
+.item:last-child {
+    background-color: green;
+} */
+.item:nth-child(odd) {
+    background-color: red;
+}
+.item:nth-child(even) {
+    background-color: yellow;
+    flex-direction: row-reverse;
+}
